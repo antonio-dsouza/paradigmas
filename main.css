@@ -1,0 +1,130 @@
+* {
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+body {
+    background: #131313;
+}
+
+p {
+    background-color: transparent;
+    text-align: center;
+}
+
+.new-transaction {
+    width: 200px;
+    height: 40px;
+    color: #fff;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: #240046;
+    cursor: pointer;
+}
+
+.new-transaction:active {
+    background-color: #3c096c;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.table-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-line {
+    display: flex;
+    justify-content: space-around;
+    background-color: #29292929;
+    border-radius: 8px;
+}
+
+.table-head {
+    display: flex;
+    justify-content: space-around;
+}
+
+.table-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.table-line > p:nth-child(1),
+.table-head > p:nth-child(1) {
+    width: 30%;
+}
+
+.table-line > p:nth-child(2), 
+.table-head > p:nth-child(2) {
+    width: 20%;
+}
+
+.table-line > p:nth-child(3), 
+.table-head > p:nth-child(3) {
+    width: 20%   
+}
+
+.table-line > p:nth-child(4), 
+.table-head > p:nth-child(4) {
+    width: 10%   
+}
+
+.table-line > p:nth-child(5), 
+.table-head > p:nth-child(5) {
+    width: 10%   
+}
+ 
+.table-line:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.calculation-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.total-card,
+.saida-card,
+.entrada-card {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #292929;
+}
+
+.card-body {
+    display: flex;
+    padding: 0px 15px 0px 15px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+}
+
+.svg-icon {
+    width: 2.3em;
+    height: 2.3em;
+    background-color: transparent;
+}
+  
+.svg-icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
+}

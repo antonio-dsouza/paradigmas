@@ -128,3 +128,45 @@ main {
     stroke: #4691f6;
     stroke-width: 1;
 }
+
+.popup-box {
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #272727;
+    border-radius: 10px;
+}
+
+.form-title {
+    text-align: center;
+}
+
+input {
+    width: 250px;
+}
+
+input, select, option {
+    color: #131313;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.add-transacao-button {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #240046;
+    cursor: pointer;
+}
+
+.add-transacao-button:active {
+    background-color: #3c096c;
+}
+

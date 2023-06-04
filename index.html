@@ -48,8 +48,22 @@
                 </div>
             </div>
         </div>
-        <button class="new-transaction" type="menu">Nova transação</button>
-        
+        <!--<button id="new-transaction-button" class="new-transaction" type="menu" onclick="showForm()">Nova transação</button>-->
+        <div class="popup-box">
+            <form class="popup-form" action="" method="POST">
+                <h2 class="form-title">Nova Transação</h2>
+                <input type="text" placeholder="Descrição">
+                <input type="number" placeholder="Valor">
+                <input type="text" placeholder="Categoria">
+                <input type="date">
+                <select name="acao" id="select-acao">
+                    <option value="" disabled selected>Selecione a ação</option>
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+                <button class="add-transacao-button" type="submit">Adicionar transação</button>
+            </form>
+        </div>
         <div class="table-container">
             <div class="table-head">
                 <p>Descrição</p>
@@ -59,41 +73,6 @@
                 <p>Ações</p>
             </div>
             <div class="table-body">
-                <div class="table-line">
-                    <p>Descrição</p>
-                    <p>Valor</p>
-                    <p>Categoria</p>
-                    <p>Data</p>
-                    <p>Ações</p>
-                </div>
-                <div class="table-line">
-                    <p>Descrição</p>
-                    <p>Valor</p>
-                    <p>Categoria</p>
-                    <p>Data</p>
-                    <p>Ações</p>
-                </div>
-                <div class="table-line">
-                    <p>Descrição</p>
-                    <p>Valor</p>
-                    <p>Categoria</p>
-                    <p>Data</p>
-                    <p>Ações</p>
-                </div>
-                <div class="table-line">
-                    <p>Descrição</p>
-                    <p>Valor</p>
-                    <p>Categoria</p>
-                    <p>Data</p>
-                    <p>Ações</p>
-                </div>
-                <div class="table-line">
-                    <p>Descrição</p>
-                    <p>Valor</p>
-                    <p>Categoria</p>
-                    <p>Data</p>
-                    <p>Ações</p>
-                </div>
                 <div class="table-line">
                     <p>Descrição</p>
                     <p>Valor</p>

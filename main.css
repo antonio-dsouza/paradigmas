@@ -4,6 +4,7 @@
 }
 
 body {
+    margin: 0;
     background: #131313;
 }
 
@@ -130,6 +131,7 @@ main {
 }
 
 .popup-box {
+    display: flex;
     margin-top: 10px;
 }
 

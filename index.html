@@ -8,6 +8,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
@@ -52,16 +53,16 @@
         <div class="popup-box">
             <form class="popup-form" action="" method="POST">
                 <h2 class="form-title">Nova Transação</h2>
-                <input type="text" placeholder="Descrição">
-                <input type="number" placeholder="Valor">
-                <input type="text" placeholder="Categoria">
-                <input type="date">
-                <select name="acao" id="select-acao">
+                <input id="description" type="text" placeholder="Descrição">
+                <input id="value" type="number" placeholder="Valor">
+                <input id="category" type="text" placeholder="Categoria">
+                <input id="date" type="date">
+                <select id="action" name="acao">
                     <option value="" disabled selected>Selecione a ação</option>
-                    <option value="entrada">Entrada</option>
-                    <option value="saida">Saída</option>
+                    <option value="Entrada">Entrada</option>
+                    <option value="Saída">Saída</option>
                 </select>
-                <button class="add-transacao-button" type="submit">Adicionar transação</button>
+                <button class="add-transacao-button" onclick="createTransaction()" type="button">Adicionar transação</button>
             </form>
         </div>
         <div class="table-container">
@@ -69,17 +70,11 @@
                 <p>Descrição</p>
                 <p>Valor</p>
                 <p>Categoria</p>
+                <p>Tipo</p>
                 <p>Data</p>
                 <p>Ações</p>
             </div>
             <div class="table-body">
-                <div class="table-line">
-                    <p>Descrição</p>
-                    <p>Valor</p>
-                    <p>Categoria</p>
-                    <p>Data</p>
-                    <p>Ações</p>
-                </div>
             </div>
         </div>
     </main>

@@ -3,17 +3,45 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Paradigmas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
     <main>
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Adicionar Transação</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                <div class="modal-body">
+                    <form class="popup-form" action="" method="POST">
+                        <input id="description" type="text" placeholder="Descrição">
+                        <input id="value" type="number" placeholder="Valor">
+                        <input id="category" type="text" placeholder="Categoria">
+                        <input id="date" type="date">
+                        <select id="action" name="acao">
+                            <option value="" disabled selected>Selecione a ação</option>
+                            <option value="Entrada">Entrada</option>
+                            <option value="Saída">Saída</option>
+                        </select>
+                        <button class="add-transacao-button" onclick="createTransaction()" type="button">Adicionar transação</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="calculation-cards">
             <div class="entrada-card">
                 <div class="card-header">
@@ -49,21 +77,8 @@
                 </div>
             </div>
         </div>
-        <!--<button id="new-transaction-button" class="new-transaction" type="menu" onclick="showForm()">Nova transação</button>-->
-        <div class="popup-box">
-            <form class="popup-form" action="" method="POST">
-                <h2 class="form-title">Nova Transação</h2>
-                <input id="description" type="text" placeholder="Descrição">
-                <input id="value" type="number" placeholder="Valor">
-                <input id="category" type="text" placeholder="Categoria">
-                <input id="date" type="date">
-                <select id="action" name="acao">
-                    <option value="" disabled selected>Selecione a ação</option>
-                    <option value="Entrada">Entrada</option>
-                    <option value="Saída">Saída</option>
-                </select>
-                <button class="add-transacao-button" onclick="createTransaction()" type="button">Adicionar transação</button>
-            </form>
+        <div class="transaction-button-container">
+            <button id="new-transaction-button" class="new-transaction" data-toggle="modal" data-target="#exampleModal" type="menu" onclick="showForm()">Nova transação</button>
         </div>
         <div class="table-container">
             <div class="table-head">

@@ -33,7 +33,11 @@ async function getTransactions() {
     .then(response => response.json())
     .then(response => {
         response.forEach(transaction => {
-            var dateObject = new Date(transaction.date);
+            if (transaction.date.length <= 10) {
+                var dateObject = new Date(transaction.date + ' 00:00:01');
+            } else {
+                var dateObject = new Date(transaction.date);
+            }
             $(".table-body").append(`
             <div class="table-line" data-type="${transaction.action}" id="${transaction.id}">
                 <p>${transaction.description}</p>
